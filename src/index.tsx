@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { BrowserRouter } from 'react-router-dom';
 
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
@@ -15,11 +14,9 @@ L.Icon.Default.mergeOptions({
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  <BrowserRouter basename="/Contact-Management-System">
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </BrowserRouter>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
 );
 
 reportWebVitals();
